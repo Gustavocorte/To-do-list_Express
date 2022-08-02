@@ -3,10 +3,10 @@ const mongoose = require('mongoose')
 
 const checklistSchema = mongoose.Schema({
     name: {type: String, require: true},
-    task: [{
-        task: mongoose.Types.ObjectId,
-        ref: 'Task'
+    tasks: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'task'
     }]
 })
 
-module.exports = mongoose.model('checklist', checklistSchema)
+module.exports = mongoose.model('Checklist', checklistSchema)
